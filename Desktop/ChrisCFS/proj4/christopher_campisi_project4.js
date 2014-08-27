@@ -10,9 +10,16 @@ var input;
 //console.log("Is the input a valid phone number: " + phoneTest(input));
 
 //Test for Function 2
-input = prompt("Enter an email address in john@contoso.com; format.");
-console.log("Is the input a valid email address: " + emailTest(input));
+//input = prompt("Enter an email address in john@contoso.com; format.");
+//console.log("Is the input a valid email address: " + emailTest(input));
 
+//Output for Function 3
+//input = prompt("Enter a valid website beginning with http:// or https://");
+//console.log("This this a valid website address: " + urlTest(input));
+
+//Output for Function 4
+input = prompt("Enter an all lowercase word.");
+console.log("Your corrected word: " + upperTest(input));
 
 //generic output
 console.log("You entered: " + input);
@@ -104,4 +111,36 @@ function emailTest(emailAdd)
 	
 	//If the above conditions are false then the function automatically returns true.
 	return true;
+}
+
+//Function 3 is this string a URL
+function urlTest(urlAdd)
+{
+	var https = urlAdd.substring(0, 8);
+	var http = urlAdd.substring(0, 7);
+	if(http == "http://")
+	{
+		console.log("Prefix Entered: " + http);
+		console.log("Valid unsecured website address.");
+		return true;
+	}
+	else if(https == "https://")
+	{
+		console.log("Prefix Entered: " + https);
+		console.log("Valid secured website address.");
+		return true;
+	}
+	//by default returning false if it does not have the above required prefix.
+	console.log("Invalid format. Make sure you enter http:// or https://");
+	return false;
+}
+
+//Function 4 returns a string with the first character uppercase
+function upperTest(word)
+{
+	//word = word.toUpperCase();
+	var wordEnd = word.length
+	var fChar = word[0].toUpperCase();
+	word = fChar + word.substring(1, wordEnd);
+	return word;
 }
