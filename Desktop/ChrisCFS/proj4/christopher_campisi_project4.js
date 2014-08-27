@@ -139,7 +139,7 @@ function urlTest(urlAdd)
 function upperTest(word)
 {
 	//word = word.toUpperCase();
-	var wordEnd = word.length
+	var wordEnd = word.length 
 	var fChar = word[0].toUpperCase();
 	word = fChar + word.substring(1, wordEnd);
 	return word;
