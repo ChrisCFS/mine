@@ -3,7 +3,7 @@
 //Project 4
 //Aug 28 2014
 
-var input;
+var input = -1;
 
 //Test for function 1
 //input = prompt("Enter a phone number in xxx-xxx-xxxx format.");
@@ -29,7 +29,10 @@ var input;
 console.log("The total for the array is: " + arrayValue());
 
 //generic output
-console.log("You entered: " + input);
+if (input != -1)
+{
+	console.log("You entered: " + input);
+}
 
 //Function 1. Takes input of a phone number and determines if its in the right format 
 //and has the correct length then returns true if that is the case so the function call
@@ -191,3 +194,19 @@ function smallNumArray(number)
 	return "The smallest number that is greater than " + number + " is " + smallNum + ".";
 }
 
+//Function 6 Find the total value of just the numbers in an array, even if some of the items are not numbers.
+function arrayValue()
+{
+	var myArray = [0, 2, 3, "55", "Kinda cool", 19, 25, 0, 42, 0, 97, "blue", "idea"];
+	var total = 0;
+	
+	//used typeof to determine if element is a number as it returns "number" if true
+	for(var i = 0; i < myArray.length; i++)
+	{
+		if(typeof myArray[i] == "number")
+		{
+			total += myArray[i];
+		}
+	}
+	return total;
+}
