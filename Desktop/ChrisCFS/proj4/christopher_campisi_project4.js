@@ -18,8 +18,15 @@ var input;
 //console.log("This this a valid website address: " + urlTest(input));
 
 //Output for Function 4
-input = prompt("Enter an all lowercase word.");
-console.log("Your corrected word: " + upperTest(input));
+//input = prompt("Enter an all lowercase word.");
+//console.log("Your corrected word: " + upperTest(input));
+
+//Output for Function 5
+//input = prompt("Enter a number 1-99");
+//console.log(smallNumArray(input));
+
+//Output for Function 6
+console.log("The total for the array is: " + arrayValue());
 
 //generic output
 console.log("You entered: " + input);
@@ -135,7 +142,9 @@ function urlTest(urlAdd)
 	return false;
 }
 
-//Function 4 returns a string with the first character uppercase
+//Function 4 Title-case a string: returns a string with the first character uppercase
+//tried just changing word[0] = word[0].toUpperCase(); but it didn't work. so I went with
+//the method displayed below.
 function upperTest(word)
 {
 	//word = word.toUpperCase();
@@ -144,3 +153,41 @@ function upperTest(word)
 	word = fChar + word.substring(1, wordEnd);
 	return word;
 }
+
+//Function 5 Find the smallest value in an array that is greater than a given number
+function smallNumArray(number)
+{
+	var myArray = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+	var arrayLength = myArray.length;
+	var smallNum = 200;
+	var arrayContent = "My Array has these numbers: ";
+	// testing array length console.log("Array Length: " + arrayLength);
+	//Displaying array contents
+	
+	for(var i = 0; i < arrayLength; i++)
+	{
+		arrayContent += myArray[i] + ",";
+	}
+	console.log(arrayContent);
+	
+	if(number >= 100)
+	{
+		return "Invalid input. The number exceeds the parameters required.";
+	}
+	else if(number < 0)
+	{
+		return "Invalid input. The number is less then the parameters required.";
+	}
+	for(var i = 0; i < arrayLength; i++)
+	{
+		if(myArray[i] > number)
+		{
+			if(myArray[i] < smallNum)
+			{
+				smallNum = myArray[i];
+			}
+		}
+	}
+	return "The smallest number that is greater than " + number + " is " + smallNum + ".";
+}
+
