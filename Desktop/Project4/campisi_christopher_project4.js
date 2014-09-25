@@ -2,11 +2,10 @@
 //SDI 1409
 //Project 4
 
-//Function 1
-currency();
+secondFunction();
 
 //Function 1 of the number list
-function currency()
+function firstFunction()
 {
 	var number = 100;
 	var number2 = 50.235;
@@ -22,4 +21,15 @@ function currency()
 	number2 = number2.toFixed(2);
 	
 	console.log("Number shortened to: " + number2);
+}
+
+//Function 2 of number list
+function secondFunction()
+{
+	var number = "250";
+	
+	console.log(number + " is being displayed as a string.");
+	
+	number = parseInt(number);
+	console.log(number);
 }
