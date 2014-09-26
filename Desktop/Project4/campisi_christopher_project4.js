@@ -2,7 +2,7 @@
 //SDI 1409
 //Project 4
 
-fourthFunction();
+fifthFunction();
 
 //Function 1 of the number list
 function firstFunction()
@@ -102,3 +102,18 @@ function fourthFunction()
 	
 }
 
+//Function 5 Array - find total number value
+function fifthFunction()
+{
+	var myArray = [1, 2, 3, 4, "Bob", 5, 6, 7, 8, 9, "John", 10];
+	var total = 0;
+	
+	for (var i = 0; i < myArray.length; i++)
+	{
+	 	if(isNaN((myArray[i] / 1)) == false)
+	 	{
+	 		total += myArray[i];
+	 	}
+	}
+	console.log("Total: " + total);
+}
