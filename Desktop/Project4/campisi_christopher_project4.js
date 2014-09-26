@@ -2,7 +2,7 @@
 //SDI 1409
 //Project 4
 
-fifthFunction();
+sixthFunction();
 
 //Function 1 of the number list
 function firstFunction()
@@ -116,4 +116,22 @@ function fifthFunction()
 	 	}
 	}
 	console.log("Total: " + total);
+}
+
+//Function 6 
+//Is the string a URL? (Does it start with http: or https:?) Thought writing that would be easier.
+function sixthFunction()
+{
+	var web;
+	
+	web = prompt("Enter a web address beginning with http or https. I.E. http://www.google.com");
+	
+	if(web.substring(0, 4) == "http" || web.substring(0, 5) == "https")
+	{
+		console.log("The website a proper URL.");
+	}
+	else
+	{
+		console.log("This is not a proper web address.");
+	}
 }
