@@ -2,7 +2,7 @@
 //SDI 1409
 //Project 4
 
-thirdFunction();
+fourthFunction();
 
 //Function 1 of the number list
 function firstFunction()
@@ -34,7 +34,7 @@ function secondFunction()
 	console.log(number);
 }
 
-//Function 3
+//Function 3 string list: title-case check
 function thirdFunction()
 {
 	var title = "the great escape artist";
@@ -63,3 +63,42 @@ function thirdFunction()
 	}
 	console.log("New Title: " + newTitle);
 }
+
+//Function 4 string looking for phone number format
+function fourthFunction()
+{
+	var number;
+	number = prompt("Enter a phone number in this format: xxx-xxx-xxxx");
+	
+	//checks to see if - is at the 4th index of number.
+	if(number.indexOf("-") == 3)
+	{
+		console.log("First segment is correct.");
+		//checks to see if - is at the 8th index of number.
+		if(number.lastIndexOf("-") == 7);
+		{
+			console.log("Second segment is correct.");
+			//if everything else is correct and the phone number is correct length
+			if(number.length = 12)
+			{
+				console.log("Phone number is correct length");
+			}
+			else
+			{
+				console.log("Phone number is not the correct length");
+			}
+		}
+		//does not allow me to have an else for 1st nested if statement. comes up with a syntax error.
+		/*else
+		{
+			console.log("Second dash(-) is not in the correct spot");
+		}*/
+	}
+	else
+	{
+		console.log("First dash(-) is not in the correct spot");
+	}
+	console.log("Phone number has correct format.");
+	
+}
+
