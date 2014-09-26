@@ -2,7 +2,7 @@
 //SDI 1409
 //Project 4
 
-secondFunction();
+thirdFunction();
 
 //Function 1 of the number list
 function firstFunction()
@@ -32,4 +32,34 @@ function secondFunction()
 	
 	number = parseInt(number);
 	console.log(number);
+}
+
+//Function 3
+function thirdFunction()
+{
+	var title = "the great escape artist";
+	var newTitle = "";
+	var temp;
+	var t;
+	var num = 1;
+	
+	console.log("Old Title: " + title);
+	while(num != 2)
+	{
+		temp = title.slice(num,title.indexOf(" ")+1);
+		t = title.charAt(0);
+		t = t.toUpperCase();
+		
+		temp = t + temp;
+		if(title.search(" ") == -1)
+		{
+			temp = t + title.slice(num, title.length);	
+			num = 2;
+		}
+		newTitle = newTitle + temp;
+			
+		title = title.slice(title.indexOf(" ")+1, title.length);
+		
+	}
+	console.log("New Title: " + newTitle);
 }
